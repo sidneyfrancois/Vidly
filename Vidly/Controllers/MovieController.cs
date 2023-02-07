@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -9,15 +11,20 @@ namespace Vidly.Controllers
         // GET: Movie/Random
         public ActionResult Random()
         {
-            var movie = new Movie() { Name = "Shrek" };
+            var movie = new Movie() { Name = "World" };
+            var customers = new List<Customer>
+            {
+                new Customer { Name = "Customer 1" },
+                new Customer { Name = "Customer 2" }
+            };
 
-            return View(movie);
-        }
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
 
-        [Route("movie/release/{year}/{month:regex(\\d{2}):range(1, 12)}")]
-        public ActionResult ByReleaseDate(int year, int month)
-        {
-            return Content(year + "/" + month);
+            return View(viewModel);
         }
     }
 }

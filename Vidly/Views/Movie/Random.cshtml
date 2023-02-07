@@ -4,5 +4,29 @@
     ViewBag.Title = "Random";
 }
 
-<h2>@Model.Movie.Name</h2>
+@*
+    Comment with multiples lines
+    in Razor Pages.
+*@
+
+@{ 
+    var classTitle = Model.Customers.Count > 0 ? "popular" : null;
+}
+
+<h2 class="@classTitle">@Model.Movie.Name</h2>
+
+@if (Model.Customers.Count == 0)
+{
+    <p>No one has rented this movie.</p>
+}
+else
+{
+    <ul>
+        @foreach (var customer in Model.Customers)
+        {
+            <li>@customer.Name</li>
+        }
+    </ul>
+}
+
 

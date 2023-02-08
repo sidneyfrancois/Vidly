@@ -24,7 +24,6 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
-        // GET: Customer
         public ActionResult Index()
         {
             var viewModel = new ListOfCustomersViewModel
@@ -44,6 +43,11 @@ namespace Vidly.Controllers
                 return View(customer);
             else
                 return HttpNotFound();
+        }
+
+        public ActionResult New()
+        {
+            return View();
         }
 
     }

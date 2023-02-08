@@ -158,8 +158,13 @@
     <Compile Include="Migrations\202302081412585_AddBirthDateCustomer.designer.cs">
       <DependentUpon>202302081412585_AddBirthDateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302081854034_AddGenreAndDates.cs" />
+    <Compile Include="Migrations\202302081854034_AddGenreAndDates.designer.cs">
+      <DependentUpon>202302081854034_AddGenreAndDates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,6 +215,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302081412585_AddBirthDateCustomer.resx">
       <DependentUpon>202302081412585_AddBirthDateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302081854034_AddGenreAndDates.resx">
+      <DependentUpon>202302081854034_AddGenreAndDates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

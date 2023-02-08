@@ -1,0 +1,27 @@
+﻿@model Vidly.ViewModels.ListOfMoviesViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movies</h2>
+
+@if (Model.Movies.Any())
+{
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Movies</th>
+        </tr>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td>@movie.Name</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>We currently don't have any movie yet.</p>
+}
+

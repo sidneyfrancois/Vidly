@@ -1,0 +1,26 @@
+﻿@model Vidly.ViewModels.ListOfCustomersViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Customers</h2>
+
+@if (Model.Customers.Any())
+{
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Customers</th>
+        </tr>
+        @foreach (var customer in Model.Customers)
+        {
+            <tr>
+                <td>@Html.ActionLink(customer.Name, "Details", "Customer", new { id = customer.Id}, null)</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>We don't have any customers yet.</p>
+}

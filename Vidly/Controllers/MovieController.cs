@@ -8,6 +8,22 @@ namespace Vidly.Controllers
 {
     public class MovieController : Controller
     {
+        public ActionResult Index()
+        {
+            var movies = new List<Movie>
+            {
+                new Movie { Name = "Shrek" },
+                new Movie { Name = "KillBill" }
+            };
+
+            var viewModel = new ListOfMoviesViewModel
+            {
+                Movies = movies
+            };
+
+            return View(viewModel);
+        }
+
         // GET: Movie/Random
         public ActionResult Random()
         {

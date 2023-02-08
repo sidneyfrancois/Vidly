@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -28,7 +29,7 @@ namespace Vidly.Controllers
         {
             var viewModel = new ListOfCustomersViewModel
             {
-                Customers = _context.Customers.ToList()
+                Customers = _context.Customers.Include((c) => c.MemberShipType).ToList()
             };
 
             return View(viewModel);

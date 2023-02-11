@@ -11,11 +11,16 @@
     <table class="table table-bordered table-hover">
         <tr>
             <th>Movies</th>
+            <th>Genre</th>
         </tr>
+
+        @Html.ActionLink("New Movie", "New", "Movie", new { @class = "btn btn-primary" })
+
         @foreach (var movie in Model.Movies)
         {
             <tr>
                 <td>@Html.ActionLink(movie.Name, "Details", "Movie", new { id = movie.Id }, null)</td>
+                <td>@movie.Genre.Name</td>
             </tr>
         }
     </table>

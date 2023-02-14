@@ -166,6 +166,10 @@
     <Compile Include="Migrations\202302142050037_AddConstraint.designer.cs">
       <DependentUpon>202302142050037_AddConstraint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302142119523_AddConstraintCustomer.cs" />
+    <Compile Include="Migrations\202302142119523_AddConstraintCustomer.designer.cs">
+      <DependentUpon>202302142119523_AddConstraintCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -265,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302142050037_AddConstraint.resx">
       <DependentUpon>202302142050037_AddConstraint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302142119523_AddConstraintCustomer.resx">
+      <DependentUpon>202302142119523_AddConstraintCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

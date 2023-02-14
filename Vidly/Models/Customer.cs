@@ -16,11 +16,14 @@ namespace Vidly.Models
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         [Display(Name = "Date of Birth")]
+        [Min18YearsIfMember]
         public DateTime? BirthDate { get; set; }
+
         public bool IsSubscribedToNewsletter { get; set; }
 
         [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
+
         public MembershipType MemberShipType { get; set; }
     }
 }
